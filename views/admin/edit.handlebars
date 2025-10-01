@@ -1,0 +1,26 @@
+<main>
+    <div class="p-5 mb-4 bg-light rounded-3">
+        <div class="container-fluid py-5">
+            <h3> ALTERANDO </h3>
+            <div class="card">
+                <div class="card-body">
+                    <form action="/editar" method="POST">
+                        {{#if compra}}
+                        <!--<label for="_id">ID: </label>-->
+                        <input type="text" id="_id" name="_id" readonly="true" class="form-control" value="{{compra._id}}"><br>
+                        <label for="nome">Nome </label>
+                        <input type="text" id="nome" name="nome" class="form-control" value="{{compra.nome}}"><br>
+                        <label for="nome">Quantidade </label>
+                        <input type="text" id="quantidade" name="quantidade" class="form-control" value="{{compra.quantidade}}"><br>
+                        <label for="descricao">Descrição </label>
+                        <input type="text" id="descricao" name="descricao" class="form-control" value="{{compra.descricao}}"><br>
+                        <button type="submit" class="btn btn-success">Salvar</button>
+                    </form>
+                    {{/if}}
+                </div>
+            </div>
+            <br>
+            <a button href="/" class="btn btn-primary">Voltar</button></a>
+        </div>
+    </div>
+</main>

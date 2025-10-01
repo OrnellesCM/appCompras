@@ -1,0 +1,22 @@
+<main>
+    <div class="p-5 mb-4 bg-light rounded-3">
+        <div class="container-fluid py-5">
+            <h2>LISTA DE COMPRAS</h2>
+            <hr>
+            <a href="/adicionar">
+                <button class="btn btn-success">ADICIONAR</button></a>
+            {{#each compras}}
+            <div class="card mt-3">
+                <div class="card-body">
+                    <!--<h4><b>ID:</b>{{_id}}</h4>-->
+                    <small><b>Nome:</b> {{nome}} </small><br>
+                    <small><b>Descrição:</b> {{descricao}} </small><br>
+                    <small><b>Quantidade:</b> {{quantidade}} </small><br>
+                    <a href="/editar/{{_id}}" class="btn btn-success mt-3">ALTERAR</a>
+                    <a href="/deletar/{{_id}}"  class="btn btn-danger mt-3">REMOVER</a>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</main>
